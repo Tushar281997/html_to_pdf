@@ -16,4 +16,5 @@ from utils import convert_html_to_pdf
 
 path = '/sample.html' #path of html file
 #calling the function
+
 convert_html_to_pdf(path, 'output.pdf', context=context)
