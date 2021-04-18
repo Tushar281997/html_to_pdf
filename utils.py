@@ -2,6 +2,12 @@ from xhtml2pdf import pisa
 
 
 def convert_html_to_pdf(source_html_path, output_filename, context=None):
+    """
+    :param source_html_path: path of the html file
+    :param output_filename: name of the output file
+    :param context: list of data which need to be passed as context
+    :return: outputfile path
+    """
     # open output file for writing (truncated binary)
     source_html = open(source_html_path).read()
     if context:
