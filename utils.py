@@ -13,7 +13,7 @@ def convert_html_to_pdf(source_html_path, output_filename, context=None):
     if context:
         context_keys = context.keys()
         for context_key in context_keys:
-            source_html = source_html.replace(context_key, context.get(context))
+            source_html = source_html.replace(context_key, context.get(context_key))
     result_file = open(output_filename, "w+b")
     # convert HTML to PDF
     pisa_status = pisa.CreatePDF(
