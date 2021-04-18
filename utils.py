@@ -8,7 +8,7 @@ def convert_html_to_pdf(source_html_path, output_filename, context=None):
     :param context: dictionary of data which need to be passed as context
     :return: Boolen
     """
-    # open output file for writing (truncated binary)
+    # open output file to read
     source_html = open(source_html_path).read()
     if context:
         context_keys = []
