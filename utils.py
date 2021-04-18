@@ -11,8 +11,7 @@ def convert_html_to_pdf(source_html_path, output_filename, context=None):
     # open output file to read
     source_html = open(source_html_path).read()
     if context:
-        context_keys = []
-        context_keys = map(context_keys.append(context), context)
+        context_keys = context.keys()
         for context_key in context_keys:
             source_html = source_html.replace(context_key, context.get(context))
     result_file = open(output_filename, "w+b")
