@@ -10,7 +10,7 @@ Install pisa using "pip install xhtml2pdf" command
 
 #context passed must **dictionary** as shown below for the sample file
 
-context = {'{Heading}':'HTML TO PDF CONVERTER','{first_name}':'Tushar', '{last_name}':'Nachan' }
+context = {"{first_name}":'Tushar', "{amount}":'9,99,99,99,999', "{amount_in_words}": "Ninety Nine Crore Nine Lakh Ninety Nine Thousand Nine Hundred Ninety Nine and Ninety Nine Paisa Only"}
 
 from utils import convert_html_to_pdf
 
