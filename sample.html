@@ -1,92 +1,98 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:top="http://www.w3.org/1999/xhtml">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         .container {
-            position: absolute;
-            left: 40%;
-            top: 30%;
-            transform: translate(-50%, -50%);
+            position: relative;
+            transform: translate(10%, -10%);
             padding: 10px;
         }
-        
+
         .intro {
             padding: 10px;
         }
-        
-        #myTable {
-            border: 1px solid #000;
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 60%;
-            margin-bottom: 6%;
-        }
-        
+
+        .table{
+        		-pdf-word-wrap: CJK;
+                word-break: break-all;
+				border: 1px solid #222222;
+				padding:3px 2px 0px 3px;
+				margin-bottom:20px;
+			}
+
         td,
         th {
             border: 1px solid #000;
             text-align: left;
-            padding: 8px;
+            padding: 15px;
         }
-        
-        #myTable td:first-child {
-            border-left: none;
-            width: 8em;
-            min-width: 8em;
-            max-width: 8em;
-        }
-        
-        #myTable td:nth-child(2),
-        #myTable td:nth-child(3) {
-            border-left: none;
-            width: 20em;
-            min-width: 20em;
-            max-width: 20em;
+
+        .logo-image {
+            position: relative;
+            padding: 10px;
+            margin: 10px;
+            margin-left: 132px;
         }
     </style>
 </head>
 
+
 <body>
-    <div class="container">
-        <p class="intro">Dear {first_name},<br><br> Please find the details mentioned below</p>
-        <table id="myTable">
+<img class="logo-image" src="C:\Users\Desktop\tushar\api\user\bondsindia_logo.png" alt="bondsindia_logo" style="height:70px width:70px;width: 100px;height: 70px;">
+    <div class="container" style="top:20px">
 
-            <tr>
-                <td>Amount</td>
-
-                <td colspan="2">{amount}</td>
-            </tr>
-            <tr>
-                <td>Amount in words</td>
-                <td colspan="2">{amount_in_words}</td>
-
-
-            </tr>
-            <tr>
-                <td>Name</td>
-                <td colspan="2">{name}</td>
-
-
-            </tr>
-            <tr>
-                <td>XYZ</td>
-                <td colspan="2">gljrngl jrnsdjign iodsjfo</td>
-
-
-            </tr>
-            <tr>
-                <td>ABC</td>
-                <td>qqwes</td>
-                <td>dskck</td>
-            </tr>
-
-        </table>
-
+        <p class="intro">Dear Sir,<br><br> Please find the details mentioned below</p>
+        <table class="table" style=" width: 392px; border-color: #2b2b2b;">
+						<tbody>
+							<tr>
+								<td style="width: 200px;">
+									<p><strong>First name</strong></p>
+								</td>
+                                <td style="width: 300px; word-break: break-all;">
+									<p>{first_name}</p>
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 200px;">
+									<p><strong>Amount in words</strong></p>
+								</td>
+								<td style="width: 300px;">
+									<p>{amount_in_words}</p>
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 200px;">
+									<p><strong>Type of Account</strong></p>
+								</td>
+								<td style="width: 300px;">
+									<p>{type_of_account}</p>
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 200px;">
+									<p><strong>Bank Name</strong></p>
+								</td>
+								<td style="width: 300px;">
+									<p>{bank_name}</p>
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 200px;">
+									<p><strong>IFSC Code</strong></p>
+								</td>
+								<td style="width: 300px;">
+									<p>{ifsc_code}</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
         <p class="intro">Thanks and Regards
             <br><br> Signature</p>
 
